@@ -24,23 +24,18 @@ class bank_account(object):
 
 ent_int = bank_account()
 
-def processing():
+while True:
     entered = input("\nbalance or withdraw or deposit or exit?\n=> ")
     if entered == "balance":
         ent_int.disp_balance()
-        processing()
     elif entered == "withdraw":
         amount = int(input("enter amount to withdraw\n=> "))
         ent_int.withdraw(amount)
-        processing()
     elif entered == "deposit":
         amount = int(input("enter amount to deposit\n=> "))
         ent_int.deposit(amount)
-        processing()
     elif entered == "exit":
-        pass
+        break
     else:
         print("invalid input. please try again.")
-        processing()
 
-processing()
